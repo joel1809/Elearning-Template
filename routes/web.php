@@ -17,3 +17,13 @@ Route::get('/', function () {
     return view('main.home');
 });
 
+
+Auth::routes();
+Route::get('/logout',function(){
+    auth()->logout();
+    Session()->flush();
+
+    return Redirect::to('/');
+});
+
+Route::get('/home', 'HomeController@index')->name('home');
