@@ -1,13 +1,13 @@
 {
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
-    "[php]": {
-        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnType": true,
     "[blade]": {
         "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+    },
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
     },
 
 }

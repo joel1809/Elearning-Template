@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\InstructorController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Redirect;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','MainController@home');
+Route::get('/', 'MainController@home');
 
 
 
 Auth::routes();
-Route::get('/logout',function(){
+Route::get('/logout', function () {
     auth()->logout();
     Session()->flush();
 
@@ -26,3 +29,7 @@ Route::get('/logout',function(){
 })->name('logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/instructor/overview', 'InstructorController@index')->name('instructor.index');;
+Route::get('/instructor/new', 'InstructorController@create')->name('instructor.create');
+Route::post('/instructor/store', 'InstructorController@store')->name('instructor.store');
+Route::get('instrutor/{id}/edit', 'InstructorController@edit')->name('instructor.edit');

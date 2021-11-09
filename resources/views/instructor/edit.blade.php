@@ -10,15 +10,15 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <label for="title">Titre du cours</label>
-                            <input type="text" placeholder="Name" name="title" value="Titre du cours">
+                            <input type="text" placeholder="Name" name="title" value="{{$course->title}}">
                         </div>
                         <div class="col-lg-12">
                             <label for="subtitle">Sous-titre du cours</label>
-                            <input type="text" placeholder="Email" name="subtitle" value="Sous-tite du cours">
+                            <input type="text" placeholder="Email" name="subtitle" value="{{$course->subtitle}}">
                         </div>
                         <div class="col-lg-12">
                             <label for="description">Description du cours</label>
-                            <textarea type="textarea" placeholder="Phone" name="description">Description du cours</textarea>
+                            <textarea type="textarea" placeholder="Phone" name="description">{{$course->description}}</textarea>
                         </div>
                         <div class="col-lg-12">
                             <select class="form-control" name="category">
