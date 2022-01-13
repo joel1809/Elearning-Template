@@ -1,7 +1,7 @@
 <nav class="mainmenu mobile-menu">
     <ul>
         <li class="active">
-            <a href="#">
+            <a href="{{route('main.home')}}">
                 <i class="fas fa-home"></i>
                 Accueil
             </a>
@@ -68,7 +68,7 @@
                 <i class="fas fa-heart"></i>
                 <span class="badge badge-pill badge-danger">1</span>
             </a>
-            <ul class="dropdown px-2 py-2"> 
+            <ul class="dropdown px-2 py-2">
                 <li>
                     <div class="d-flex">
                         <img class="avatar border-rounded" src="https://blog.hyperiondev.com/wp-content/uploads/2019/02/Blog-Types-of-Web-Dev.jpg"/>
