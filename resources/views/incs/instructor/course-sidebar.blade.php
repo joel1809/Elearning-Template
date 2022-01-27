@@ -26,7 +26,7 @@
             </li>
         </ul>
         <div class="d-flex justify-content-around">
-            <a class="primary-btn" href="#">
+            <a class="primary-btn" href="{{route('instructor.publush',$course->id)}}">
                 <i class="fas fa-check"></i>
                 Mettre en ligne
             </a>

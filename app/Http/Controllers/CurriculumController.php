@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Owenoj\LaravelGetId3\GetId3;
 use App\Course;
-use App\Http\Managers\VideoManager;
 use App\Section;
 use Cocur\Slugify\Slugify;
 use Illuminate\Http\Request;
+use Owenoj\LaravelGetId3\GetId3;
+use App\Http\Managers\VideoManager;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class CurriculumController extends Controller
 {
@@ -85,6 +86,10 @@ class CurriculumController extends Controller
     {
         $course = Course::find($id);
         $section = Section::find($sectionId);
+        $fileToDelete = 'public/courses-sections/' . Auth::user()->id . '/' . $section->video;
+        if (Storage::exists($fileToDelete)) {
+            Storage::delete($fileToDelete);
+        }
         $section->delete();
         return redirect()->route('instructor.curriculum.index', $course->id)->with('success', 'la section a été supprimer');
     }

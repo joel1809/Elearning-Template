@@ -30,7 +30,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="ha-pic mt-5">
-                    <img src="https://blog.cursuspro.com/wp-content/uploads/2017/07/CursusPro_Tendances_e-learning.jpg" alt="">
+                    <img src="{{ asset('img/dog-g2bef5881a_1920.jpg') }}" alt="">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -42,7 +42,7 @@
                         <li><i class="fas fa-check"></i> Plus de 500 cours disponibles</li>
                         <li><i class="fas fa-check"></i> Contenu vidéo</li>
                     </ul>
-                    <a href="#" class="ha-btn">Voir les cours</a>
+                    <a href="" class="ha-btn">Voir les cours</a>
                 </div>
             </div>
         </div>

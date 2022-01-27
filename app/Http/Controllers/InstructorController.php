@@ -138,4 +138,13 @@ class InstructorController extends Controller
         $course->delete();
         return redirect()->route('instructor.index')->with('success', 'le cour a été supprimer');
     }
+
+    public function publish($id)
+    {
+        $course = Course::find($id);
+
+        $course->is_published = true;
+        $course->save();
+        return redirect()->back()->with('success', 'votre cours est maintenant en ligne');
+    }
 }
